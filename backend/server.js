@@ -9,7 +9,7 @@ app.use(express.json());
 
 const connectDB = async () => {
   await mongoose.connect(
-    "mongodb+srv://adityaatre26:CE1b1hZRaV7PFAjw@cluster0.1mx6n.mongodb.net/Hacktopia"
+    process.env.MONGO_URI
   );
   console.log("Connected to the database");
 };
